@@ -2,6 +2,17 @@
 <hr>
 
 <div class="app-mensajes" id="app-mensajes">
+
+  <div class="selftext" *ngFor="let chat of _cs.chats">
+    <span class="badge text-bg-primary">XXXX</span>
+
+    <p>
+      {{chat.mensaje}}
+    </p>
+  </div>
+
+
+<!--
   <div class="selftext">
     <span class="badge text-bg-primary">XXXX</span>
 
@@ -17,6 +28,7 @@
       Saludos kp
     </p>
   </div>
+-->
 
 
 </div>
