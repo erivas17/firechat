@@ -3,8 +3,13 @@
 
 <div class="app-mensajes" id="app-mensajes">
 
-  <div class="selftext" *ngFor="let chat of _cs.chats">
-    <span class="badge text-bg-primary">XXXX</span>
+  <div *ngFor="let chat of _cs.chats"
+      [ngClass]="{ 'selftext': _cs.usuario.uid == chat.uid }">
+    <span class="badge"
+          [ngClass]="{ 'text-bg-primary': _cs.usuario.uid == chat.uid,
+                       'text-bg-success': _cs.usuario.uid != chat.uid }">
+          {{chat.nombre}}
+    </span>
 
     <p>
       {{chat.mensaje}}
